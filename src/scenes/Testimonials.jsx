@@ -1,12 +1,43 @@
 import LineGradient from "../components/LineGradient";
+import "./Testimonial.css";
 import { motion } from "framer-motion";
+import { Pagination } from "swiper";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import AVTR1 from "../assets/nirmal_bro.jpg";
+import AVTR2 from "../assets/dada.png";
+import AVTR3 from "../assets/surya.png";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+const data = [
+  {
+    id: 1,
+    image: AVTR1,
+    cname: "Nirmal Shrestha",
+    title: "President of Operations at CG",
+    review: "When our own skills did not manage to get where we wanted, Nischal took care of the rest. The expertize, customer service and follow up we experienced from Nischal and his team was simply flawless."  },
+  {
+    id: 2,
+    image: AVTR2,
+    cname: "Mahendra Pratap Khadka",
+    title: "Managing Director at Sulabh Rents Pvt. Ltd",
+    review: "Under tight deadlines and with high expectations, Nischal was a pleasure to partner with, on a high profile political campaign website. Professional, conscientious and thoroughly competent - I wouldn't hesitate in recommending him to everyone I know."  },
+  {
+    id: 3,
+    image: AVTR3,
+    cname: "Surya Shrestha",
+    title: "Janitor at Proshore",
+    review:"Great work!!! The team was solid, efficient and knowledgeable. They did an amazing job on my very challenging app. I will be using them again. Thank you for doing such a great job! "  },
+];
 
 const Testimonials = () => {
   return (
     <section id="testimonials" className="pt-32 pb-16">
       {/* HEADING */}
       <motion.div
-        className="md:w-1/3 text-center md:text-left"
+        className="md:w-2/5 mx-auto text-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -19,70 +50,35 @@ const Testimonials = () => {
         <p className="font-playfair font-semibold text-4xl mb-5 text-red">
           TESTIMONIALS
         </p>
-        <LineGradient width="mx-auto w-2/5" />
-        <p className="mt-10">
-          Here's What People are Saying About My Work. Aliquam aliquet integer
-          ut fames odio in at. At magna ornare dictum lectus.
-        </p>
+        <div className="flex justify-center mt-5">
+            <LineGradient width="w-2/3" />
+          </div>
       </motion.div>
 
       {/* TESTIMONIALS */}
-      <div className="md:flex md:justify-between gap-8">
-        <motion.div
-          className="mx-auto relative bg-blue max-w-[400px] h-[350px] flex flex-col justify-end p-16 mt-48
-            before:absolute before:top-[-120px] before:-ml-[110px] before:left-1/2 before:content-person1"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.6 }}
-          variants={{
-            hidden: { opacity: 0, scale: 0.8 },
-            visible: { opacity: 1, scale: 1 },
-          }}
+      <section id="testimonials">
+        <Swiper
+          className="container testimonial__container"
+          // install Swiper modules
+          modules={[Pagination]}
+          spaceBetween={50}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
         >
-          <p className="font-playfair text-6xl">“</p>
-          <p className="text-center text-xl">
-            A auctor pharetra hendrerit mattis amet etiam interdum platea.
-          </p>
-        </motion.div>
-
-        <motion.div
-          className="mx-auto relative bg-red max-w-[400px] h-[350px] flex flex-col justify-end p-16 mt-48
-            before:absolute before:top-[-120px] before:-ml-[110px] before:left-1/2 before:content-person2"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          variants={{
-            hidden: { opacity: 0, scale: 0.8 },
-            visible: { opacity: 1, scale: 1 },
-          }}
-        >
-          <p className="font-playfair text-6xl">“</p>
-          <p className="text-center text-xl">
-            Aliquam aliquet integer ut fames odio in at. At magna ornare dictum
-            lectus.
-          </p>
-        </motion.div>
-
-        <motion.div
-          className="mx-auto relative bg-yellow max-w-[400px] h-[350px] flex flex-col justify-end p-16 mt-48
-            before:absolute before:top-[-120px] before:-ml-[110px] before:left-1/2 before:content-person3"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.4, duration: 0.6 }}
-          variants={{
-            hidden: { opacity: 0, scale: 0.8 },
-            visible: { opacity: 1, scale: 1 },
-          }}
-        >
-          <p className="font-playfair text-6xl">“</p>
-          <p className="text-center text-xl">
-            Fames odio in at. At magna ornare dictum lectus.
-          </p>
-        </motion.div>
-      </div>
+          {data.map(({ id, image, cname, title, review }) => {
+            return (
+              <SwiperSlide key={id} className="testimonial">
+                <div className="client__avatar">
+                  <img src={image} alt="Avatar One" />
+                </div>
+                <h5 className="client__name text-red text-2xl">{cname}</h5>
+                <p className="text-xl">{title}</p>
+                <small className="client__review text-lg">{review}</small>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </section>
     </section>
   );
 };

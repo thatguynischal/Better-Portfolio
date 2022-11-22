@@ -1,20 +1,43 @@
 import LineGradient from "../components/LineGradient";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  const notify = () =>
+    toast(
+      "Thank you for getting in touch. I'll get back to you soon as possible."
+    );
+
+  const form = useRef();
   const {
     register,
     trigger,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (e) => {
-    console.log("~ e", e);
-    const isValid = await trigger();
-    if (!isValid) {
-      e.preventDefault();
-    }
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_7rx6ike",
+        "template_alzyt2h",
+        form.current,
+        "1JlZdaJ2nXgcbDEXJ"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
   };
 
   return (
@@ -69,6 +92,7 @@ const Contact = () => {
           className="basis-1/2 mt-10 md:mt-0"
         >
           <form
+            ref={form}
             target="_blank"
             onSubmit={onSubmit}
             action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e"
@@ -129,9 +153,11 @@ const Contact = () => {
             <button
               className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500"
               type="submit"
+              onClick={notify}
             >
               SEND ME A MESSAGE
             </button>
+            <ToastContainer />
           </form>
         </motion.div>
       </div>

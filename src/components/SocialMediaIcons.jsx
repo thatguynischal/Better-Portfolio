@@ -1,9 +1,10 @@
+import {BsGithub} from "react-icons/bs"
 const SocialMediaIcons = () => {
   return (
     <div className="flex justify-center md:justify-start my-10 gap-7">
       <a
         className="hover:opacity-50 transition duration-500"
-        href="https://www.linkedin.com"
+        href="https://www.linkedin.com/in/nischalkhadka7"
         target="_blank"
         rel="noreferrer"
       >
@@ -11,7 +12,7 @@ const SocialMediaIcons = () => {
       </a>
       <a
         className="hover:opacity-50 transition duration-500"
-        href="https://www.twitter.com"
+        href="https://www.twitter.com/onewithbrain"
         target="_blank"
         rel="noreferrer"
       >
@@ -19,15 +20,15 @@ const SocialMediaIcons = () => {
       </a>
       <a
         className="hover:opacity-50 transition duration-500"
-        href="https://www.facebook.com"
+        href="https://www.github.com/thatguynischal"
         target="_blank"
         rel="noreferrer"
       >
-        <img alt="facebook-link" src="../assets/facebook.png" />
+        <BsGithub className="text-3xl"/>
       </a>
       <a
         className="hover:opacity-50 transition duration-500"
-        href="https://www.instagram.com"
+        href="https://www.instagram.com/justchalchal"
         target="_blank"
         rel="noreferrer"
       >

@@ -1,6 +1,18 @@
 import LineGradient from "../components/LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
+import { RiVuejsFill } from "react-icons/ri";
+import { FaReact } from "react-icons/fa";
+import { AiOutlineHtml5 } from "react-icons/ai";
+import { FaCss3Alt } from "react-icons/fa";
+import { FaBootstrap } from "react-icons/fa";
+import { SiTailwindcss } from "react-icons/si";
+import { FaWordpress } from "react-icons/fa";
+import { CgFigma } from "react-icons/cg";
+import { SiAdobephotoshop } from "react-icons/si";
+import { SiCanva } from "react-icons/si";
+import { SiJirasoftware } from "react-icons/si";
+import { BiGitMerge } from "react-icons/bi";
 
 const MySkills = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
@@ -23,9 +35,19 @@ const MySkills = () => {
             MY <span className="text-red">SKILLS</span>
           </p>
           <LineGradient width="w-1/3" />
-          <p className="mt-10 mb-7">
-            Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-            fames odio in at.
+          <p className="mt-10 mb-7 flex text-9xl gap-4">
+            <RiVuejsFill />
+            <FaReact />
+            <FaWordpress />
+            <AiOutlineHtml5 />
+            <FaCss3Alt />
+            <FaBootstrap />
+            <SiTailwindcss />
+            <CgFigma />
+            <SiAdobephotoshop />
+            <SiCanva />
+            <SiJirasoftware />
+            <BiGitMerge />
           </p>
         </motion.div>
 
@@ -65,15 +87,15 @@ const MySkills = () => {
             <div className="z-10">
               <p className="font-playfair font-semibold text-5xl">01</p>
               <p className="font-playfair font-semibold text-3xl mt-3">
-                Experience
+                Flexibility
               </p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-            A auctor pharetra hendrerit mattis amet etiam interdum platea. Est
-            morbi porttitor scelerisque fermentum, sagittis non egestas. Amet
-            odio sit sagittis,
+            So I said to the gym instructor: 'Can you teach me to do the
+            splits?' He said: 'How flexible are you?' I said: I can't make
+            Tuesdays.'
           </p>
         </motion.div>
 
@@ -93,16 +115,16 @@ const MySkills = () => {
             <div className="z-10">
               <p className="font-playfair font-semibold text-5xl">02</p>
               <p className="font-playfair font-semibold text-3xl mt-3">
-                Innovative
+                Critical Thinking
               </p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-            Urna, eget pulvinar dolor cursus volutpat dictum odio. Nec ultricies
-            amet in in neque nibh tortor. Libero sed pretium justo nulla blandit
-            nulla amet habitant iaculis. Iaculis in congue vitae sollicitudin
-            faucibus a
+            A friend of mine asserts that she loves all animals. However, I did
+            point out to her the distain she holds for large African
+            water-dwelling mammals. I just think she’s being a bit hippo
+            critical.
           </p>
         </motion.div>
         {/* IMAGINATIVE */}
@@ -127,10 +149,9 @@ const MySkills = () => {
             <div className="w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-            Accumsan eu fringilla nisi, eget. Vitae, eget ut id proin arcu in
-            curabitur. Lectus libero, egestas enim aliquam quis felis amet.
-            Sagittis, amet netus fringilla netus lobortis odio sed platea.
-            Bibendum.
+            One hobbit asks another: "Don't you feel like we're just a figment
+            of someone's imagination?" "Mate I have no idea what you're tolkien
+            about"
           </p>
         </motion.div>
       </div>
