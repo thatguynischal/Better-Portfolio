@@ -34,7 +34,7 @@ const MySkills = () => {
           <p className="font-playfair font-semibold text-4xl mb-5">
             MY <span className="text-red">SKILLS</span>
           </p>
-          <LineGradient width="w-1/3" />
+          <LineGradient width="w-2/5" />
           <p className="mt-10 mb-7 flex text-9xl gap-4">
             <RiVuejsFill />
             <FaReact />

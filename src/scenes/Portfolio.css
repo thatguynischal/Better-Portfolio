@@ -31,9 +31,12 @@
     ;
 }
 .zzz{
-    max-width: 34rem;
+    max-width: 30rem;
     max-height: 35rem;
     left: calc(50% - 11rem);
     border-radius: 16rem 16rem 0 0;
     overflow: hidden;
+}
+.contactImg{
+    max-height: 26rem;
 }
