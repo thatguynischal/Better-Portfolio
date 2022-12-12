@@ -59,7 +59,7 @@ const Landing = ({ setSelectedPage }) => {
           </p>
 
           <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            Hi, I'm Nischal. I am a frontend developer form Gatthaghar, Bhaktapur.
+            Hi, I'm Nischal. I'm a frontend developer from Gatthaghar, Bhaktapur.
           </p>
         </motion.div>
 

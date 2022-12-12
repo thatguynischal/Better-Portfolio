@@ -4,9 +4,8 @@ import IMG1 from "../assets/all6.png";
 import IMG2 from "../assets/meme.png";
 import IMG3 from "../assets/flash.png";
 import IMG4 from "../assets/centerwill.png";
-import IMG5 from "../assets/project-5.jpeg";
-import IMG6 from "../assets/project-6.jpeg";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import IMG5 from "../assets/luxury1.png";
+import IMG6 from "../assets/Calculator.png";
 
 const data = [
   {
@@ -20,8 +19,8 @@ const data = [
     id: 2,
     image: IMG2,
     title: "Meme4you (Meme Generator)",
-    github: "https://github.com",
-    demo: "https://instagram.com",
+    github: "https://github.com/thatguynischal/memes_creator",
+    demo: "https://memes-creator.vercel.app/",
   },
   {
     id: 3,
@@ -33,23 +32,23 @@ const data = [
   {
     id: 4,
     image: IMG4,
-    title: "Nischal The Great",
-    github: "https://github.com",
+    title: "Centerwill Charity",
+    github: "https://github.com/thatguynischal/Responsive_site",
     demo: "https://instagram.com",
   },
   {
     id: 5,
     image: IMG5,
-    title: "Nischal The Greatest",
-    github: "https://github.com",
-    demo: "https://instagram.com",
+    title: "Luxury Designer",
+    github: "https://github.com/thatguynischal/Luxury-Brands",
+    demo: "https://luxury-brands.vercel.app/",
   },
   {
     id: 6,
     image: IMG6,
-    title: "Lord & Savoiur Nischal",
-    github: "https://github.com",
-    demo: "https://instagram.com",
+    title: "JS Calculator",
+    github: "https://github.com/thatguynischal/Calculator",
+    demo: "https://calculator-omega-umber.vercel.app/",
   },
 ];
 function portfolio() {
@@ -70,7 +69,7 @@ function portfolio() {
               hover:bg-blue hover:text-white transition duration-500"
             
           >
-            <a href={github}>Github</a>
+            <a href={github} target="_blank">Github</a>
           </div>
           <div
             className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
@@ -78,7 +77,7 @@ function portfolio() {
             href={github}
           >
             <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-10 font-playfair">
-            <a href={demo}>Live Demo</a>
+            <a href={demo} target="_blank">Live Demo</a>
             </div>
           </div>
               </div>

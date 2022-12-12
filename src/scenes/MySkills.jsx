@@ -35,19 +35,19 @@ const MySkills = () => {
             MY <span className="text-red">SKILLS</span>
           </p>
           <LineGradient width="w-2/5" />
-          <p className="mt-10 mb-7 flex text-9xl gap-4">
-            <RiVuejsFill />
-            <FaReact />
-            <FaWordpress />
-            <AiOutlineHtml5 />
-            <FaCss3Alt />
-            <FaBootstrap />
-            <SiTailwindcss />
-            <CgFigma />
-            <SiAdobephotoshop />
-            <SiCanva />
-            <SiJirasoftware />
-            <BiGitMerge />
+          <p className="mt-10 mb-7 flex text-3xl gap-4">
+
+            <SidebarIcon icon={<FaReact/>} text="ReactJS"/>
+            <SidebarIcon icon={<RiVuejsFill/>} text="VueJS"/>
+            <SidebarIcon icon={<AiOutlineHtml5/>} text="HTML"/>
+            <SidebarIcon icon={<FaCss3Alt/>} text="CSS"/>
+            <SidebarIcon icon={<FaBootstrap/>} text="Bootstrap"/>
+            <SidebarIcon icon={<SiTailwindcss/>} text="Tailwind CSS"/>
+            <SidebarIcon icon={<CgFigma/>} text="Figma"/>
+            <SidebarIcon icon={<SiAdobephotoshop/>} text="Adobe Photoshop"/>
+            <SidebarIcon icon={<FaWordpress/>} text="Wordpress"/>
+            <SidebarIcon icon={<SiJirasoftware/>} text="Jira"/>
+            <SidebarIcon icon={<BiGitMerge/>} text="Git"/>
           </p>
         </motion.div>
 
@@ -158,5 +158,11 @@ const MySkills = () => {
     </section>
   );
 };
+const SidebarIcon = ({ icon, text = "tooltip" }) => (
+  <div className="sidebar-icon group">
+    {icon}
 
+    <span className="sidebar-tooltip group-hover:scale-100">{text}</span>
+  </div>
+);
 export default MySkills;
